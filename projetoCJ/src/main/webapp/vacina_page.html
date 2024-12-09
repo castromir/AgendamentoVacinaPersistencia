@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Nova Vacina</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>Cadastrar Nova Vacina</h2>
+    <!-- Formulário de Cadastro -->
+    <form action="/inserirVacina">
+        <div class="mb-3">
+            <label for="titulo" class="form-label">Título</label>
+            <input type="text" class="form-control" id="titulo" name="titulo" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="doses" class="form-label">Doses</label>
+            <input type="number" class="form-control" id="doses" name="doses" min="1" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="periodicidade" class="form-label">Periodicidade</label>
+            <select class="form-select" id="periodicidade" name="periodicidade" required>
+                <option value="">Selecione a Periodicidade</option>
+                <option value="1">Diária</option>
+                <option value="2">Semanal</option>
+                <option value="3">Mensal</option>
+                <option value="4">Anual</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="intervalo" class="form-label">Intervalo</label>
+            <input type="number" class="form-control" id="intervalo" name="intervalo" min="1" required>
+        </div>
+
+        <!-- Botão de Envio -->
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </form>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
